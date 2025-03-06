@@ -1,34 +1,54 @@
 {smcl}
+{cmd:help dropbox}{right: ({browse "http://www.stata-journal.com/article.html?article=pr0058":SJ14-3: pr0058
+> })}
 {hline}
-help for {hi:dropbox}
-{hline}
-{title: Command to find Dropbox directory}
 
-{p 8 27}
+{title:Title}
+
+{p2colset 5 16 18 2}{...}
+{p2col:{cmd:dropbox} {hline 2}}Command to find Dropbox directory{p_end}
+{p2colreset}{...}
+
+
+{title:Syntax}
+
+{p 8 15 2}
 {cmd:dropbox}
-[, {cmd:NOCD}] 
+[{cmd:,} {cmd:nocd} {cmd:external}] 
 
 
 {title:Description}
-{p} Services such as Dropbox have made data sharing easier. They can complicate do file sharing because Dropbox will be located in different places for different users.
-{cmd:dropbox} searches for a user's main dropbox directory and switches to that directory. From there, users can use relative paths to move between their shared folders. {p_end}
 
-{title:Options}
+{pstd}
+{cmd:dropbox} searches for a user's main dropbox directory and
+switches to that directory.  From there, users can use relative paths to move
+between their shared folders.
 
-{p 0 4}
-{cmd:NOCD} tells Stata not to change to the dropbox directory.
-{p_end}
 
-{title:Saved results}
+{title:Option}
 
-The program stores the dropbox directory in {inp:r(db)}.
+{phang}
+{cmd:nocd} tells Stata not to change to the dropbox directory. A clickable link to the directory is added to the viewer. 
+
+{cmd:external} tells Stata to look for the Dropbox folder on an external drive rather than the internal hard drive. The command will recursively search through 3 levels of directories on the external drives.
+
+
+{title:Stored results}
+
+{pstd}
+The program stores the dropbox directory in {cmd:r(db)}.
 
 {title:Authors} 
- 
-	{browse "rhicks@princeton.edu":Raymond Hicks} 
-	Niehaus Center for Globalization and Governance, Princeton University 
+
+{pstd}Raymond Hicks{p_end}
+{pstd}History Lab{p_end}
+{pstd}Columbia University{p_end}
+{pstd}New York, NY{p_end}
+{pstd}arpie71@gmail.com{p_end}
   
-	{browse "http://scholar.harvard.edu/dtingley":Dustin Tingley} 
-	Government Department, Harvard University
-  
-Email {browse "mailto:rhicks@princeton.edu":rhicks@princeton.edu} if you observe any problems. 
+
+
+{title:Also see}
+
+{p 4 14 2}Article:  {it:Stata Journal}, volume 14, number 3: {browse "http://www.stata-journal.com/article.h
+> tml?article=pr0058":pr0058}{p_end}

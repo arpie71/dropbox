@@ -4,3 +4,5 @@ The command will return the local Dropbox directory as r(db) and, unless the `no
 From there, the relative paths of all users within Dropbox will be the same. The command also uses the username macro to look for the Dropbox directory. 
 
 Version 2 of the command adds an `external` option that will search in secondary and external drives first before looking at the primary drive. The `nocd` option has also been adjusted so that a clickable link will appear in the Viewer.
+
+To install, type `net install dropbox , from("https://raw.githubusercontent.com/arpie71/dropbox/main/")` from within Stata.
